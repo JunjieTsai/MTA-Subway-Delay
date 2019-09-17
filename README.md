@@ -2,7 +2,7 @@
 This is a repository for collecting real-time data from the MTA Developer API to compute subway delays at each station.
 
 ## Requirements
-- MTA SUBWAY API KEY: [Click here to register and get a MTA API KEY](https://datamine.mta.info/user/register)
+- MTA SUBWAY API KEY: [Click here to register an MTA API KEY](https://datamine.mta.info/user/register)
 - Dependent python libraries: os, time, datetime, requests, pandas, gtfs-realtime-bindings.  
 Please run codes below in terminal to prepare dependent libraries:  
 ``` python
@@ -57,8 +57,11 @@ mtagtfs.delay(date)
 
 # For historical schedules, please set the argument date_schedule; refer to: https://transitfeeds.com/p/mta/79.
 date = '20180801'
-mtagtfs.delay(date, date_schedule = '20180708')
+mtagtfs.delay(date, date_schedule = '20180708') # '20180708' is the schedule releasing date
 ```
+## Application
+- Visualization Website: [MTA SUBWAY DELAY](https://public.tableau.com/profile/junjie.cai#!/vizhome/Book1_15686658217570/Dashboard1)
+
 ## Data Description
 ### Update Interval
 - Real-time status updates per 15 seconds on average;
